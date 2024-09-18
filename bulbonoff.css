@@ -1,0 +1,21 @@
+#calculator {
+    width: 200px;
+    margin: 0 auto;
+  }
+  
+  #display {
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    font-size: 16px;
+    text-align: right;
+  }
+  
+  button {
+    width: 50px;
+    height: 20px;
+    border: 1px solid black;
+    font-size: 16px;
+    margin: 1px;
+  }
+  

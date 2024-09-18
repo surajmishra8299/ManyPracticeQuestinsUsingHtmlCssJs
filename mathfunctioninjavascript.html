@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Functions</title>
+</head>
+<body>
+  <h1>Math Functions</h1>
+
+  <p id="output"></p>
+
+  <script>
+    // Square root
+    const number = 25;
+    const squareRoot = Math.sqrt(number);
+    document.getElementById("output").innerText = `Square root of number is: ${squareRoot}`;
+
+    // Power
+    const base = 3;
+    const exponent = 4;
+    const power = Math.pow(base, exponent);
+    document.getElementById("output").innerText += `\n${base} raised to the power of ${exponent} is: ${power}`;
+
+    // Absolute value
+    const negativeNumber = -10;
+    const absoluteValue = Math.abs(negativeNumber);
+    document.getElementById("output").innerText += `\nThe absolute value of ${negativeNumber} is: ${absoluteValue}`;
+
+    // Trigonometric functions
+    const angle = 45; // in degrees
+    const radians = (angle * Math.PI) / 180; // converting to radians
+    const sine = Math.sin(radians);
+    const cosine = Math.cos(radians);
+    document.getElementById("output").innerText += `\nSine of ${angle} degrees is: ${sine}`;
+    document.getElementById("output").innerText += `\nCosine of ${angle} degrees is: ${cosine}`;
+
+    // Random number
+    const random = Math.random();
+    document.getElementById("output").innerText += `\nA random number between 0 and 1 is: ${random}`;
+  </script>
+</body>
+</html>

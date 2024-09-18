@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Dropdown Menu Basic</title>
+		<style type="text/css">
+
+			body{
+				font-family: sans-serif;
+			}
+
+			.dropbutton{
+				width: 100%;
+				border: none;
+				background-color: darkblue;
+				color: white;
+				padding: 5px 8px;
+				cursor: pointer;
+			}
+
+			.dropdown{
+				width: 150px;
+				position: relative;
+			}
+
+			.dropdown-content{
+				display: none;
+				position: absolute;
+			}
+
+			.dropdown-content a{
+				text-decoration: none;
+				color: white;
+				background-color: royalblue;
+				display: block;
+				padding: 5px 8px;
+			}
+
+			.dropdown-content a:hover{
+				background-color: darkblue;
+			}
+            .dropdown:hover .dropdown-content{
+				display: block;
+			} 
+
+			.dropdown:hover .dropbutton{
+				background-color: black;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class = "wrapper">
+			<h1>Dropdown Menu Basic</h1>
+			<div class = "dropdown">
+				<button class = "dropbutton">Options</button>
+				<div class = "dropdown-content">
+					<a href = "#">Operating System</a>
+					<a href = "#">Data Structures</a>
+					<a href = "#">Web Desingning</a>
+					<a href = "#">Python</a>
+				</div>
+			</div>
+
+			<div>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua.
+			</div>
+		</div>
+	</body>
+</html>

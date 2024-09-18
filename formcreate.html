@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create form</title>
+</head>
+
+<body>
+    <center>
+        <h1>Register Yourself</h1>
+        <table id="myForm" onchange="validateForm(event)">
+            <tr>
+                <td><label>First Name</label></td>
+                <td>
+                    <input type="text" id="firstname" name="first" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Last Name</label></td>
+                <td>
+                    <input type="text" id="lastname" name="last" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Username</label></td>
+                <td>
+                    <input type="text" id="username" name="username" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email ID</label></td>
+                <td>
+                    <input type="email" id="email" name="email" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td>
+                    <input type="password" id="password" name="password" required>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Confirm Password</label></td>
+                <td>
+                    <input type="password" id="confirmpassword" name="confirm" required>
+                </td>
+            </tr>
+            <tr>
+            <td>
+                <input type="submit" id="submit" value="submit">
+            </td></tr>
+        </table>
+    </center>
+
+    <script type="text/javascript">
+
+        const form = document.getElementById('myForm');
+        const firstName = document.getElementById('firstName');
+        const lastName = document.getElementById('lastName');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirmPassword');
+    
+        form.addEventListener('submit', function(event) {
+          event.preventDefault();
+    
+          // Reset error messages
+          clearErrorMessages();
+    
+          // Check if first name is filled
+          if (firstName.value.trim() === '') {
+            displayErrorMessage(firstName, '* First Name is not filled');
+          }
+    
+          // Check if last name is filled
+          if (lastName.value.trim() === '') {
+            displayErrorMessage(lastName, '* Last Name is not filled');
+          }
+    
+          // Check if email is properly filled
+          if (!validateEmail(email.value.trim())) {
+            displayErrorMessage(email, '* Email is invalid');
+          }
+    
+          // Check if password is filled
+          if (password.value.trim() === '') {
+            displayErrorMessage(password, '* Password is not filled');
+          }
+    
+          // Check if confirm password is filled
+          if (confirmPassword.value.trim() === '') {
+            displayErrorMessage(confirmPassword, '* Confirm Password is not filled');
+          }
+    
+          // Check if password and confirm password match
+          if (password.value !== confirmPassword.value) {
+            displayErrorMessage(confirmPassword, '* Passwords do not match');
+          }
+        });
+    
+        function validateEmail(email) {
+          // Simple email validation using regular expression
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          return emailRegex.test(email);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        #tm{
+            font-size: large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(215, 25, 21);
+           }
+    </style>
+
+    <script>
+       function ss()
+       {
+          var tm = window.document.getElementById('tm');
+          tm.innerHTML = Date();
+       }
+
+       function starttime()
+       {
+        window.setInterval(ss,1000);
+       }
+    </script>
+</head>
+<body>
+        <div id="tm">DIGITAL CLOCK</div>
+        <button onclick="starttime()">Start Time:</button>
+</body>
+</html>

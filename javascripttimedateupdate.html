@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Object Example</title>
+</head>
+<body>
+  <h1>Date Object Example</h1>
+  
+  <p id="demo"></p>
+  
+  <script>
+    // Create a new Date object
+    var currentDate = new Date();
+    
+    // Get the current day (0-6, where Sunday is 0)
+    var day = currentDate.getDay();
+    
+    // Get the current month (0-11, where January is 0)
+    var month = currentDate.getMonth();
+    
+    // Get the current hour (0-23)
+    var hour = currentDate.getHours();
+    
+    // Get the current second (0-59)
+    var second = currentDate.getSeconds();
+    
+    // Define an array of weekday names
+    var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    
+    // Define an array of month names
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    // Display the current date and time
+    var displayText = "Today is " + weekdays[day] + ".<br>";
+    displayText += "The current month is " + months[month] + ".<br>";
+    displayText += "The current time is " + hour + ":" + second + ".<br>";
+    
+    // Update the content of the <p> element with id "demo"
+    document.getElementById("demo").innerHTML = displayText;
+  </script>
+</body>
+</html>

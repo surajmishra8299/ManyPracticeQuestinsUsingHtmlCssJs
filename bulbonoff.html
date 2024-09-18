@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mouse Hover Example</title>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .image {
+            width: 200px;
+            height: 200px;
+        }
+
+        .text {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="bulb_off.jpeg" alt="Bulb Off" class="image" id="bulbImage">
+        <p class="text" id="bulbText">Hover over the bulb to turn it on</p>
+    </div>
+
+    <script>
+
+        document.getElementById('bulbImage').addEventListener('mouseover', function () {
+
+            document.getElementById('bulbImage').src = 'bulb_on.jpeg';
+
+            document.getElementById('bulbText').textContent = 'Bulb is on!';
+        });
+
+
+        document.getElementById('bulbImage').addEventListener('mouseout', function () {
+
+            document.getElementById('bulbImage').src = 'bulb_off.jpeg';
+
+            document.getElementById('bulbText').textContent = 'Hover over the bulb to turn it on';
+        });
+    </script>
+</body>
+
+</html>

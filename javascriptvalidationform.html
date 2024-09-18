@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Document</title>
+     <script>
+      function validate()
+      {
+            var x = document.f1.n1.value;
+            var y = document.f1.p1.value;
+
+            if(x=='' || x==null)
+            {
+                  document.getElementById("nam").innerHTML = "Please enter name";
+                  return false;
+                 
+            }
+            if(y == "") {  
+                  document.getElementById("pass").innerHTML = "**Fill the password please!";  
+                  return false;  
+               }  
+                
+                 
+               if(y.length < 8) {  
+                  document.getElementById("pass").innerHTML = "**Password length must be atleast 8 characters";  
+                  return false;  
+               }  
+            else
+            {
+                  alert("Form Submitted Successfully")
+                  return true
+            }
+      }
+     </script>
+</head>
+<body>
+      <form action="" name="f1" onsubmit="return validate()"> 
+      Enter Your Name:<b style="color:red;">*</b> <input type="text" name="n1"> <span id="nam"></span><br><br>
+      Enter Password:<b style="color:red;">*</b> <input type="password" name="p1"> <span id="pass"></span><br><br>
+      Enter Email ID:<b style="color:red;">*</b> <input type="email" name="e1"><br><br>
+      &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp<input type="submit" name="s1" value="SUBMIT">
+      </form>
+</body>
+</html>

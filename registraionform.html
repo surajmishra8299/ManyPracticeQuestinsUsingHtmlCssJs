@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registaration Form</title>
+    <style type="text/css">
+        .container {
+            border-radius: 8px;
+            background-color: thistle;
+            padding: 20px;
+        }
+
+        .row {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .col-10 {
+            float: left;
+            width: 10%;
+            margin-top: 6px;
+        }
+
+        .col-90 {
+            float: left;
+            width: 90%;
+            margin-top: 6px;
+        }
+
+        h1 {
+            font-family: Arial;
+            font-size: medium;
+            font-style: normal;
+            font-weight: bold;
+            color: brown;
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=number],
+        input[type=select],
+        input[type=date],
+        input[type=select],
+        input[type=password],
+        input[type=tel] {
+            width: 45%;
+            padding: 12px;
+            border: 1px solid rgb(168, 166, 166);
+            border-radius: 4px;
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Registaration Form</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-10">
+                <label for="fname">First Name:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="lname">Last Name:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="lname" name="lastname" placeholder="Enter your last name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="email">Email:</label>
+            </div>
+            <div class="col-90">
+                <input type="email" id="email" name="email" placeholder="EMAIL">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="mobile">Mobile:</label>
+            </div>
+            <div class="col-90">
+                <input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="gender" required>Gender:</label>
+            </div>
+            <div class="col-90">
+                <input type="radio" id="male" name="gender" value="male" />Male
+                <input type="radio" id="female" name="gender" value="female" />Female
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="dob">Date Of Birth:</label>
+            </div>
+            <div class="col-90">
+                <input type="Date" id="dob" name="dob">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="address">Address:</label>
+            </div>
+            <div class="col-90">
+                <textarea name="address" id="address" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="city">City:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="city" name="city" maxlength="10">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="pincode">Area PIN:</label>
+            </div>
+            <div class="col-90">
+                <input type="number" id="pin" name="pin" maxlength="6">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="state">State:</label>
+            </div>
+            <div class="col-90">
+                <input type="text" id="state" name="state">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="qualification" required>Qualification:</label>
+            </div>
+            <div class="col-90">
+                <select name="qualification" id="qualification">
+                    <option value=" ">Select Qualification:</option>
+                    <option value="Graduation">Graduation</option>
+                    <option value="BTech.">BTech.</option>
+                    <option value="MTech.">MTech.</option>
+                    <option value="MCA">MCA</option>
+                    <option value="BCA">BCA</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="specialization">Specialization:</label>
+            </div>
+            <div class="col-90">
+                <input type="checkbox" id="cs" value="Computer Science">Computer Science<br />
+                <input type="checkbox" id="it" value="Information Technology">Information Technology<br />
+                <input type="checkbox" id="ca" value="Computer Architecture">Computer Architecture<br />
+                <input type="checkbox" id="tc" value="Tele Communication">Tele Communication<br />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <label for="password">Password:</label>
+            </div>
+            <div class="col-90">
+                <input type="password" id="password" name="password" maxlength="8">
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Registered" onclick="SaveStudentDetails()">
+        </div>
+    </div>
+</body>
+
+</html>
